@@ -1,0 +1,32 @@
+# Kubernetes / runtime
+*.log
+
+# Fluentd runtime files
+*.pos
+fluentd/
+*.log.*
+
+# Temporary files
+tmp/
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Local environment
+.env
+.env.*
+
+# Archives
+*.zip
+*.tar
+*.tar.gz

@@ -1,0 +1,27 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+server:
+  persistentVolume:
+    enabled: false
+  retention: 2d
+
+scrapeConfigs:
+  envoy-gateway:
+    job_name: envoy-gateway
+    static_configs:
+      - targets:
+          - envoy-gateway.envoy-gateway-system.svc.cluster.local:19001
+
+alertmanager:
+  enabled: false
+
+kube-state-metrics:
+  enabled: false
+
+prometheus-node-exporter:
+  enabled: false
+
+prometheus-pushgateway:
+  enabled: false
